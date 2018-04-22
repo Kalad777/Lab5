@@ -1,0 +1,106 @@
+\documentclass{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[polish]{babel}
+\usepackage{float}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}% Include figure files
+\usepackage{dcolumn}% Align table columns on decimal point
+\usepackage{bm}% bold math
+\usepackage[cmex10]{amsmath}
+\usepackage{polski}
+\usepackage{geometry}
+
+
+\author{Dorota Nowak, Dariusz Kowalski}		%autorzy sprawozdania
+\title{Szablon sprawozdania w \LaTeX-u}		%temat wykonywanego ćwiczenia
+\date{}
+\begin{document}
+\newgeometry{tmargin=1cm, bmargin=1cm, lmargin=2 cm, rmargin=2cm}
+\maketitle %uwaga! tutaj automatycznie zostanie wpisana data wykonania sprawozdania
+
+
+Data wykonania ćwiczenia: 06.03.2018 (Lab. 1)
+%data wykonania ćwiczenia i numer laboratorium (1- pierwsze zajęcia laboratoryjne)
+\\
+
+\section{Wstęp}
+W sprawozdaniu można umieścić krótki wstęp
+wyjaśniający cel danego ćwiczenia i wprowadzający najważniejsze terminy, odwołanie do literatury \cite{USRP, Szostka, IQ, ieee}. Nie należy przekopiowywać instrukcji, ani internetu.
+
+\section{Symulacja toru radiowego z modulacją BPSK}
+
+\subsection{Tor nadawczy (liczba podrozdziałów przy analizie wyników i ich tytuły oczywiście będą się różnic dla poszczególnych ćwiczeń)}
+
+Przedstawienie wyników symulacji zgodnie z instrukcją do danego ćwiczenia. Analiza uzyskanych wyników.
+
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=5 in]{nadajnik}
+\end{center}
+\caption{Schemat nadajnika}
+\label{fig:wykres}
+\end{figure}
+
+Wszystkie zrzuty z ekranu powinny być czytelne. Trzeba zadbać o odpowiednie wyskalowanie osi, ułożenie bloków itp. Wykresy zawsze powinny być opisane, zawierać legendę, opis osi. Każdy wykres powinien być przeanalizowany i podpisany. Rys. 1 przedstawia … \\
+
+Dodatkowo przykład tabeli:
+
+\begin{table}[!ht]
+\label{tab:Static}
+\centering
+\begin{tabular}{ccccccc}
+$t_{Ta}$ & MDL & $t_{CoFeB}$ & $\rho_{Ta}$ & $\mu_{0}M_{0}$ & $T_{C}$ & $\mu_{0}M_{S}$ \\
+(nm) & (nm) & (nm) & ($\Omega\mu$cm) & (T) & (K) & (T) \\
+\hline
+5 & 0.55 & 0.36 & 217 & 0.93 & 472 & 0.50 \\
+10 & 0.46 & 0.45 & 174 & 1.02 & 528 & 0.63 \\
+15 & 0.39 & 0.52 & 171 & 1.11 & 650 & 0.80 \\
+\end{tabular}
+\end{table}
+
+Przykład równania:
+
+\begin{equation}
+\xi_\mathrm{DL(FL)} = {\dfrac{2e}{\hbar}}\cdot {\dfrac{m}{A}}\cdot {\dfrac{\Delta H_\mathrm{L(T)}}{J_\mathrm{e}}}
+\label{eq:efficiency}
+\end{equation} \newpage
+
+
+
+\section{Wnioski}
+
+Najważniejsze wnioski i konkretne podsumowanie wyników. Bardzo cenne jest odniesienie do znanych systemów transmisji oraz do zagadnień poznanych na innych przedmiotach. \newline
+
+Komentarz może być także w formie punktów.
+\begin{enumerate}
+\item pierwszy wniosek,
+\item drugi,
+\item trzeci,
+\item etc.
+\end{enumerate}
+
+\bibliographystyle{unsrt}
+
+\begin{thebibliography}{10}
+
+\bibitem{USRP}
+Nota katalogowa radia USRP \newline 
+http://www.ni.com/datasheet/pdf/en/ds-355
+
+\bibitem{Szostka}
+J. Szóstka "Mikrofale" 2006
+
+\bibitem{IQ}
+Jakie jest Twoje IQ? Czyli o sygnałach i modulacjach kwadraturowych
+
+http://mikrokontroler.pl/2014/11/26/sdr-jakie-jest-twoje-iq-czyli-o-sygnalach-i-modulacjach-kwadraturowych/
+
+\bibitem{ieee}
+Specyfikacje IEEE \newline http://www.radio-electronics.com/info/wireless/wi-fi/ieee-802-11a.php
+
+
+\end{thebibliography}
+
+\end{document}
